@@ -89,7 +89,7 @@ def stockTableProfileJoin(table_name,engine,c_values=['sector','industry','count
     end_name_0 = table_name.split()[-3:]
     end_name=create_string_from_list(end_name_0,delimiter='_')
     print(adf)
-    #adf.to_sql('vw_cat_'+end_name,fin_engine,index=True,if_exists='replace')
+    adf.to_sql('vw_cat_'+end_name,fin_engine,index=True,if_exists='replace')
     print('Categorical View made for table {}'.format(table_name))
 
 # Need to fix profile
